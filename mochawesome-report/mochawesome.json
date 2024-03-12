@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-12T18:46:18.232Z",
+    "end": "2024-03-12T18:46:20.994Z",
+    "duration": 2762,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b41fa437-a335-40aa-8542-039e42acbcba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\APItesting.cy.js",
+      "file": "cypress\\e2e\\APItesting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e4c5c49-f6ab-4de7-980d-971bc9f6f491",
+          "title": "API Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET Call",
+              "fullTitle": "API Requests GET Call",
+              "timedOut": null,
+              "duration": 1148,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Send a GET request to retrieve a specific post\ncy.request(`${baseUrl}/posts/${postId}`)\n// Check if the response status is 200\n.its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "67d3a399-5be8-4167-a64c-0896e4a96c63",
+              "parentUUID": "4e4c5c49-f6ab-4de7-980d-971bc9f6f491",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST Call",
+              "fullTitle": "API Requests POST Call",
+              "timedOut": null,
+              "duration": 533,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Data for creating a new post\nconst postData = {\n  title: \"Test post\",\n  body: \"This is post call\",\n  userId: 1\n};\n// Send a POST request to create a new post\ncy.request({\n  method: 'POST',\n  url: `${baseUrl}/posts`,\n  body: postData\n})\n// Check if the response status is 201 (Created)\n.its('status').should('equal', 201);",
+              "err": {},
+              "uuid": "8f2a979c-2336-408c-a248-32ef557556bb",
+              "parentUUID": "4e4c5c49-f6ab-4de7-980d-971bc9f6f491",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT Call",
+              "fullTitle": "API Requests PUT Call",
+              "timedOut": null,
+              "duration": 549,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Updated data for the post\nconst updatedPostData = {\n  title: \"Test post - Updated\",\n  body: \"This is put call\",\n  userId: 1\n};\n// Send a PUT request to update an existing post\ncy.request({\n  method: 'PUT',\n  url: `${baseUrl}/posts/${postId}`,\n  body: updatedPostData\n})\n// Check if the response status is 200\n.its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "504a69fe-f042-48b3-857c-5132ffd7afae",
+              "parentUUID": "4e4c5c49-f6ab-4de7-980d-971bc9f6f491",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE Call",
+              "fullTitle": "API Requests DELETE Call",
+              "timedOut": null,
+              "duration": 374,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Send a DELETE request to remove an existing post\ncy.request({\n  method: 'DELETE',\n  url: `${baseUrl}/posts/${postId}`\n})\n// Check if the response status is 200\n.its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "1a037ccd-0f13-4d83-971b-23627c964853",
+              "parentUUID": "4e4c5c49-f6ab-4de7-980d-971bc9f6f491",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67d3a399-5be8-4167-a64c-0896e4a96c63",
+            "8f2a979c-2336-408c-a248-32ef557556bb",
+            "504a69fe-f042-48b3-857c-5132ffd7afae",
+            "1a037ccd-0f13-4d83-971b-23627c964853"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2604,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
